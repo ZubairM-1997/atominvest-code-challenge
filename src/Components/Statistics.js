@@ -68,9 +68,12 @@ class Statistics extends React.Component{
 		return(
 			<div>
 				<h2>Top 5 words</h2>
-				{
-					this.state.topFive.map((word) => <PopularWords word={word}/>)
-				}
+				<ol>
+					{
+						this.state.topFive.map((word) => <PopularWords word={word}/>)
+					}
+				</ol>
+
 				<h2>Total number of words: {this.state.total}</h2>
 
 			</div>

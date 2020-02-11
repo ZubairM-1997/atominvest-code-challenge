@@ -1,13 +1,11 @@
 import React from "react"
 
+const PopularWords = (props) => {
+	return (
+		<div>
+			<li>{props.word}</li>
+		</div>
 
-export default class PopularWords extends React.Component{
-	render(){
-		return(
-			<div>
-
-				<li>{this.props.word}</li>
-			</div>
-		)
-	}
+	)
 }
+export default PopularWords

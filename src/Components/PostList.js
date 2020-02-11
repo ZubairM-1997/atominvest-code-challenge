@@ -13,9 +13,12 @@ class PostList extends React.Component {
 	render(){
 		return(
 			<div >
-				<h3>{this.props.title}</h3>
-				<p>{this.props.body}</p>
-				<button id={this.props.id} onClick={(e) => this.deletePost(e)}>Delete</button>
+				<li >
+					<h3>{this.props.title}</h3>
+					<p>{this.props.body}</p>
+					<button id={this.props.id} onClick={(e) => this.deletePost(e)}>Delete</button>
+				</li>
+
 			</div>
 		)
 	}
