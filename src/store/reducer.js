@@ -1,7 +1,9 @@
-import {GET_POSTS, DELETE_POST} from "../actions/postActions"
+import {GET_POSTS, DELETE_POST, FAILED_REQUEST} from "../actions/postActions"
 
 let initialState = {
-	posts: []
+	posts: [],
+	error: null,
+	fetched: false
 }
 
 function reducer (state = initialState, action) {
@@ -9,13 +11,22 @@ function reducer (state = initialState, action) {
 		case GET_POSTS:
 			return {
 				...state,
-				posts: action.payload
+				posts: action.payload,
+				fetched: true
 			}
 
 		case DELETE_POST:
-			console.log(state)
 			return {
+				...state,
 				posts: [...state.posts.filter((post) => post.id !== parseInt(action.id))]
+			}
+
+		case FAILED_REQUEST:
+			return {
+				...state,
+				fetched: false,
+				error: action.payload
+
 			}
 		default:
 			return state;
