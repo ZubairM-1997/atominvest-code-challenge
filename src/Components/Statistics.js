@@ -2,6 +2,10 @@ import React from "react"
 import PopularWords from "./PopularWords"
 import propTypes from "prop-types"
 
+
+const style = {
+
+}
 class Statistics extends React.Component{
 
 	state = {
@@ -67,9 +71,9 @@ class Statistics extends React.Component{
 
 	render(){
 		return(
-			<div>
+			<div className="stats">
 				<h2>Top 5 words</h2>
-				<ol>
+				<ol className="list">
 					{
 						this.state.topFive.map((word) => <PopularWords word={word}/>)
 					}

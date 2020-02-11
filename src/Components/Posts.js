@@ -10,7 +10,7 @@ class Posts extends Component{
 
 	render(){
 		return(
-			<div>
+			<div className="posts">
 				<ol className="list">
 					{
 						this.props.postList.map((post) =>

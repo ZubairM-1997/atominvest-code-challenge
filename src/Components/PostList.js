@@ -15,10 +15,10 @@ class PostList extends React.Component {
 	render(){
 		return(
 			<div className="postListComponent">
-				<li className="postItemComponent">
+				<li >
 					<h3>{this.props.title}</h3>
 					<p>{this.props.body}</p>
-					<button id={this.props.id} onClick={(e) => this.deletePost(e)}>Delete</button>
+					<button className="delete-btn" id={this.props.id} onClick={(e) => this.deletePost(e)}>Delete</button>
 				</li>
 
 			</div>

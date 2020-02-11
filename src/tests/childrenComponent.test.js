@@ -15,7 +15,7 @@ describe("PostList Component" , () => {
 	}
 
 	let mockStore = configureStore()
-	let store, wrapper;
+	let store, wrapper
 
 	beforeEach(() => {
 		store = mockStore(initialState)
@@ -25,9 +25,12 @@ describe("PostList Component" , () => {
 	it("renders the connected component" , () => {
 		expect(wrapper.find(PostList).length).toEqual(1)
 	})
+
+
 })
 
 describe("PopularWords Component" , () => {
+
 	const expected = "Jamaica"
 	describe("Checking PropTypes" , () => {
 		it("Should not return any errors", () => {

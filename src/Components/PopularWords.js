@@ -3,7 +3,7 @@ import propTypes from "prop-types"
 
 const PopularWords = (props) => {
 	return (
-		<div>
+		<div className="word">
 			<li>{props.word}</li>
 		</div>
 

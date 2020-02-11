@@ -1,68 +1,39 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## AtomInvest Code Challenge
+![](demo.gif)
 
-In the project directory, you can run:
+### The Task
+The task was to create a React & Redux application that renders all items from the endpoint https://jsonplaceholder.typicode.com/posts
+In addition to this, the app should display a statistics section at the top with the following statistics:
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1) Total Word Count – the total word count across all the posts
+2) Top Five Frequent Words – the top five most used words across all the posts
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+Finally, the user should be able to delete any post from the list which should in turn dynamically update the statistics. Note: The delete feature does not call any API and only will only delete the post from the Redux store.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Assumptions
+The data presented was in the form of an array of objects, each object had a body and title attribute which both had strings. I assumed that the statistic section needed to include words from both the body and title of each individual object.
 
-### `npm run build`
+### Credits
+1) React.js & Redux
+2) Enzyme
+3) Jest
+4) Redux Mock Store
+5) Prop-Types
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Getting started
+Before you get started, please ensure you have the latest version of npm installed
+1) clone this repository
+3) type the command "npm install" to install the dependancies
+3) type the command "npm start" to start the local server which should run the application
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Tests
+I used create-react-app to build this application, so it was already shipped with Jest, to view all the tests passing, type the command "npm start"
 
-### `npm run eject`
+### File Structure
+![](file_structure.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
