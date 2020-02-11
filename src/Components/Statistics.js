@@ -41,7 +41,7 @@ class Statistics extends React.Component{
 			let totalPostLength = postTitle.length + postBody.length
 			countArray.push(totalPostLength)
 	})
-
+		console.log(occurances)
 		this.analyse(countArray, occurances)
   }
 
