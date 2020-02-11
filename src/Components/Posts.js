@@ -1,6 +1,7 @@
 import React, {Component} from "react"
 import PostList from "./PostList"
 
+
 export default class Posts extends Component{
 
 	render(){
@@ -19,3 +20,7 @@ export default class Posts extends Component{
 		)
 	}
 }
+
+
+
+

@@ -19,6 +19,7 @@ class App extends React.Component{
     return(
       <div>
         <Posts postList ={this.props.posts}/>
+
         <Statistics postList={this.props.posts}/>
       </div>
     )

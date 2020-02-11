@@ -1,4 +1,4 @@
-import {GET_POSTS} from "../actions/postActions"
+import {GET_POSTS, DELETE_POST} from "../actions/postActions"
 
 let initialState = {
 	posts: []
@@ -10,6 +10,12 @@ function reducer (state = initialState, action) {
 			return {
 				...state,
 				posts: action.payload
+			}
+
+		case DELETE_POST:
+			console.log(state)
+			return {
+				posts: [...state.posts.filter((post) => post.id !== parseInt(action.id))]
 			}
 		default:
 			return state;

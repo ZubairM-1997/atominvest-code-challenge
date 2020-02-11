@@ -1,4 +1,5 @@
 export const GET_POSTS = "GET_POSTS"
+export const DELETE_POST = "DELETE_POST"
 
 export const getPosts = () => {
 	return (dispatch) => {
@@ -14,3 +15,10 @@ export const getPosts = () => {
 }
 
 
+export const deletePost = (id) => {
+	return {
+		type: DELETE_POST,
+		id: id
+
+	}
+}
