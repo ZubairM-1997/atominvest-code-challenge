@@ -8,6 +8,7 @@ import {bindActionCreators} from "redux"
 import Posts from "./Components/Posts"
 import Statistics from "./Components/Statistics"
 
+
 class App extends React.Component{
 
 
@@ -37,5 +38,10 @@ function mapDispatchToProps(dispatch){
       getAllPosts: bindActionCreators(getPosts, dispatch)
   }
 }
+
+
+
+
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

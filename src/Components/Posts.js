@@ -1,15 +1,17 @@
 import React, {Component} from "react"
 import PostList from "./PostList"
+import propTypes from "prop-types"
 
 
 
 
-export default class Posts extends Component{
+
+class Posts extends Component{
 
 	render(){
 		return(
 			<div>
-				<ol>
+				<ol className="list">
 					{
 						this.props.postList.map((post) =>
 							<PostList
@@ -25,6 +27,12 @@ export default class Posts extends Component{
 		)
 	}
 }
+
+Posts.propTypes = {
+	postList: propTypes.array
+}
+
+export default Posts;
 
 
 

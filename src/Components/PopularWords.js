@@ -1,4 +1,5 @@
 import React from "react"
+import propTypes from "prop-types"
 
 const PopularWords = (props) => {
 	return (
@@ -8,4 +9,10 @@ const PopularWords = (props) => {
 
 	)
 }
+
+PopularWords.propTypes = {
+	word: propTypes.string
+}
+
+
 export default PopularWords

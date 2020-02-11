@@ -1,6 +1,8 @@
 import React from "react"
 import { connect } from 'react-redux';
 import {deletePost} from "../actions/postActions"
+import propTypes from "prop-types"
+
 
 class PostList extends React.Component {
 
@@ -12,8 +14,8 @@ class PostList extends React.Component {
 
 	render(){
 		return(
-			<div >
-				<li >
+			<div className="postListComponent">
+				<li className="postItemComponent">
 					<h3>{this.props.title}</h3>
 					<p>{this.props.body}</p>
 					<button id={this.props.id} onClick={(e) => this.deletePost(e)}>Delete</button>
@@ -36,6 +38,12 @@ const mapDispatchToProps = (dispatch) => {
 		deletePost: (id) => dispatch(deletePost(id))
 
 	}
+}
+
+PostList.propTypes = {
+	id: propTypes.number,
+	title: propTypes.string,
+	body: propTypes.string
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostList)

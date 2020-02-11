@@ -1,5 +1,6 @@
 import React from "react"
 import PopularWords from "./PopularWords"
+import propTypes from "prop-types"
 
 class Statistics extends React.Component{
 
@@ -81,5 +82,8 @@ class Statistics extends React.Component{
 	}
 }
 
+Statistics.propTypes = {
+	postList: propTypes.array
+}
 
 export default Statistics
